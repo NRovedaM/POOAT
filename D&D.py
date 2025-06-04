@@ -33,22 +33,22 @@ class Wizard(Personagem):
     def habilidade(self):
         print("Wizard conjura BOLA DE FOGO!")
 
-# Fábrica blue print5
-class FábricaDePersonagem(ABC):
+# Fábrica blue print
+class FabricaDePersonagem(ABC):
     @abstractmethod
     def criar_personagem(self):
         pass
 
 # Fábricas concretas
-class FábricaMelee(FábricaDePersonagem):
+class FabricaMelee(FabricaDePersonagem):
     def criar_personagem(self):
         return Melee()
 
-class FábricaRanger(FábricaDePersonagem):
+class FabricaRanger(FabricaDePersonagem):
     def criar_personagem(self):
         return Ranger()
 
-class FábricaWizard(FábricaDePersonagem):
+class FabricaWizard(FabricaDePersonagem):
     def criar_personagem(self):
         return Wizard()
 
@@ -60,10 +60,10 @@ def jogar(fábrica):
 
 # Testando
 print("=== Jogando com Melee ===")
-jogar(FábricaMelee())
+jogar(FabricaMelee())
 
 print("\n=== Jogando com Range ===")
-jogar(FábricaRanger())
+jogar(FabricaRanger())
 
 print("\n=== Jogando com Wizard ===")
-jogar(FábricaWizard())
+jogar(FabricaWizard())
